@@ -43,9 +43,9 @@ RUN cd bentoclient \
     && mkdir build \
     && mkdir install
 RUN cd bentoclient/build \
-    && cp ../src/docker/run_me_to_build_in_container.sh \
+    && cp ../src/docker/run_me_to_build_in_container.sh . \
     && chmod +x run_me_to_build_in_container.sh
 WORKDIR /workspace/bentoclient/build
+ENV LD_LIBRARY_PATH=/workspace/bentoclient/install/lib
+ENV DB_KEYFILE=/workspace/bentoclient/bentokey.bin
 CMD [ "bash" ]
-                                                              46,1          96%
-

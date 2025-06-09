@@ -132,8 +132,9 @@ Because it's important to know if data is real, or estimated, bentoclient mainta
 
 ## Output File Format
 
-Output CSV files have names in {symbol}_{date}_{expiryDate}_n{strikes}.csv format. Example:
+Output CSV files have names in `{symbol}_{date}_{expiryDate}_n{strikes}.csv` format. Example:
 ```
 spy_2025-04-02_2025-04-04_n100.csv
 ```
-Aside of valuation date {date} and expiry date {expiryDate}, the names have {strikes} as the number of strikes found for this underlier at the date and expiry date.
+Aside of valuation date {date} and expiry date {expiryDate}, the names have {strikes} as the number of strikes found for this underlier at the date and expiry date. Per default, output files are put in
+subdirectories matching their {date}.
