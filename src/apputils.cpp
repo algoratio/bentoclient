@@ -100,7 +100,7 @@ std::string AppUtils::getKeyScriptInBinDir(char* argv[]) {
     std::string sBinPath(argv[0]);
     std::string sBinDir = std::filesystem::path(sBinPath).parent_path().string();
     // Set sGetKey to a default script path in the binary directory
-    return sBinDir + "/getkey.sh";
+    return sBinDir + "/../scripts/getkey.sh";
 }
 
 std::string AppUtils::getKeyScript(int argc, char* argv[]) {
