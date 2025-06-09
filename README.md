@@ -128,4 +128,12 @@ For most option chains, CBBO timeseries do not provide a complete picture of pri
 
 Since for advanced price analyses it's useful to have an as complete as possible picture of option prices, bentoclient tries to fill gaps. If in a good case a CBBO record misses only the bid price, bentoclient just needs an estimate of the bid-ask spread. In a first estimation run bentoclient derives this spread from a least squares along the spreads of complete records to then fills all partial records. What's left are records with both missing bid and as prices. On the low and high end of the strike range, completely missing records will now be estimated with a log-linear extrapolation. Any gaps close to ATM can be filled from a PCP estimate for matching strikes, and elsewhere it may help to do a linear interpolation in between known values.
 
-Because it's important to know if data is real, or estimated, bentoclient maintains a comment along price records. A "spread-fill" comment indicates a fill of a partial record from a spread estimate. For low and high end empty records, it's "log-extrapolate", and in the middle of the strike range records may in rare cases have a "lin-interpol" or "pcp-fit" comment. The less comments, the more complete the incoming data. 
+Because it's important to know if data is real, or estimated, bentoclient maintains a comment along price records. A "spread-fill" comment indicates a fill of a partial record from a spread estimate. For low and high end empty records, it's "log-extrapolate", and in the middle of the strike range records may in rare cases have a "lin-interpol" or "pcp-fit" comment. The less comments, the more complete the incoming data.
+
+## Output File Format
+
+Output CSV files have names in {symbol}_{date}_{expiryDate}_n{strikes}.csv format. Example:
+```
+spy_2025-04-02_2025-04-04_n100.csv
+```
+Aside of valuation date {date} and expiry date {expiryDate}, the names have {strikes} as the number of strikes found for this underlier at the date and expiry date.
