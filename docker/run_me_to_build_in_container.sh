@@ -12,7 +12,7 @@ if [ $? -eq 0 ]; then
     echo "echo your_key_here | ccrypt -e --key databento > \$DB_KEYFILE"
     echo 
     echo "To fetch some data, try:"
-    echo "cd ..; ./install/bin/bentohistchains -s spy -n 3 -d 2025-05-02 -l info"
+    echo "cd ../install; ./bin/bentohistchains -s spy -n 3 -d 2025-05-02 -l info"
     echo "The client is designed to load symbols in paralles. So in the above command"
     echo "try putting spy,qqq,amd,aapl,googl,msft,nflx,tsla,amzn instead of just spy."
     echo
