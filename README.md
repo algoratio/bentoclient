@@ -116,7 +116,7 @@ Now to the point of why PCP is essential for bentoclient: the CBBO data stream d
 
 Of course, the relevant price of the underlier in relation to bid and ask quotes is one of the factors making options "cheap" or "expensive", buys or sells. If for instance I assume a higher than appropriate price for the underlier, call options will appear relatively underpriced, and put options overpriced. Therefore, price estimates are only useful if they are based on an unbiased estimate of the underlier.
 
-But why isn't the price of the underlier as traded at the exchange the best input for option price analyses? Because dividents paid until expirations need be subtracted, which isn't trivial, as this requires information on dividends, ex ante versus ex post, and more. Luckily, PCP provides a convenient shortcut for all of this.
+But why isn't the price of the underlier as traded at the exchange the best input for option price analyses? Because dividends paid until expirations need be subtracted, which isn't trivial, as this requires information on dividends, ex ante versus ex post, and more. Luckily, PCP provides a convenient shortcut for all of this.
 
 In a simple re-arrangement of the above PCP formula, we get:
 ```
